@@ -2,11 +2,11 @@
 using namespace std;
 #define ll long long
 #define mod 1000000007
+#define PI 3.1415926535897932384626433832795
 #define deb(x) cout << #x << " " << x << endl;
 #define pb push_back
 #define mk make_pair
 #define in insert
-#define rep(i, a, b) for (int i = a; i < b; i++)
 #define maxHeap priority_queue<int>
 #define minHeap priority_queue<int, vi, greater<int>>
 #define ps(x, y) fixed << setprecision(y) << x
