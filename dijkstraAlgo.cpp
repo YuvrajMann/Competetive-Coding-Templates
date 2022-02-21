@@ -21,13 +21,14 @@ void dijkstra(vector<vector<pair<int, int>>> adj, int src, int n) {
     dist[src] = 0;
     while (!q.empty()) {
         int u = q.top().second;
+        int dis=q.top().first;
         q.pop();
 
         for (auto it = adj[u].begin(); it != adj[u].end(); ++it) {
             int v = it->first;
             int w = it->second;
-            if (dist[u] != INT_MAX && dist[v] > (dist[u] + w)) {
-                dist[v] = dist[u] + w;
+            if (dist[u] != INT_MAX && dist[v] > (dis + w)) {
+                dist[v] = dis + w;
                 q.push(make_pair(dist[v], v));
             }
         }
